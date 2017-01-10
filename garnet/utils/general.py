@@ -4,10 +4,11 @@
 import os
 import shutil
 import json
-import time
 import subprocess
 import locale
 import hashlib
+from datetime import datetime
+
 # Pip libraries
 import yaml
 
@@ -161,7 +162,7 @@ def normalized_timestamp(timestamp=None):
 
     # Process data
     if timestamp is None:
-        value = (int(time.time()) // interval) * interval
+        value = (int(datetime.utcnow().timestamp()) // interval) * interval
     else:
         value = (int(timestamp) // interval) * interval
     # Return
