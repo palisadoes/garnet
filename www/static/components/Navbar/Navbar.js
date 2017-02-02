@@ -1,6 +1,16 @@
+/**
+ * Component: Footer
+ * Purpose: Displays Footer Section of UI
+ * Properties: None
+ **/
+
+ //React and React Bootstrap imports
 import React, { Component } from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+//React-Router imports for..Routing
+import { Link } from 'react-router';
 
+//Component's style
 import './Navbar.less'
 
 class NavBar extends Component{
@@ -10,26 +20,22 @@ class NavBar extends Component{
 
   render() {
     return(
-      <Navbar>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#">Garnet</a>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav>
-          <NavItem eventKey={1} href="#">Link</NavItem>
-          <NavItem eventKey={2} href="#">Link</NavItem>
-          <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-            <MenuItem eventKey={3.1}>Action</MenuItem>
-            <MenuItem eventKey={3.2}>Another action</MenuItem>
-            <MenuItem eventKey={3.3}>Something else here</MenuItem>
-            <MenuItem divider />
-            <MenuItem eventKey={3.3}>Separated link</MenuItem>
-          </NavDropdown>
-        </Nav>
-      </Navbar>
+      <div className="NavBar">
+        <ul>
+          <li>
+            <Link to="/hosts"><b>Hosts</b></Link>
+          </li>
+          <li>
+            <Link to="/"><img src="./static/img/garnet_logo.png" style={{'height':'35px',}}></img></Link>
+          </li>
+          <li>
+            <Link to="/hosts"><b>Agents</b></Link>
+          </li>
+        </ul>
+      </div>
     )
   }
 }
 
+//Exports class to Global namespace
 export default NavBar;
