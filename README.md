@@ -1,8 +1,20 @@
 # Garnet
-`garnet` is Python 3 based application that polls devices for performance data which can then
-be viewed via a Web Dashboard.
 
+Intuitive and lightweight static dashboard for visualising time series stored in [infosetDB](https://github.com/PalisadoesFoundation/infoset-ng)
 
-![screenshot](www/static/img/screenshot.jpg)
+![screenshot](img/screenshot.png)
 
-The latest documentation can be found at: http://garnet.readthedocs.io/en/latest/
+## Install
+```bash
+λ git clone https://github.com/PalisadoesFoundation/garnet
+λ cd garnet
+λ yarn
+λ npm start 
+```
+
+## Building for Production
+
+```bash
+λ cd garnet
+λ npm run build
+```

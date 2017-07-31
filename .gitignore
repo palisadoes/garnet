@@ -34,7 +34,9 @@ __pycache__/
 
 # Ignore files in these directories and ALL subdirectories
 data/**
-etc/**
+log/**
+cache/**
+static/node_modules/**
 www/static/img/**
 bin/agents/non-standard/**
 
